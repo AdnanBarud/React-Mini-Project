@@ -46,7 +46,7 @@ const Home = () => {
         {/* right side div */}
         <div className="flex justify-center items-center ">
           <img
-            className="w-[40vw] drop-shadow-[10px_20px_30px_rgba(0,0,0,0.5)]"
+            className="w-[50vw] drop-shadow-[10px_20px_30px_rgba(0,0,0,0.5)]"
             src={shoes}
             alt="Shoe"
           />

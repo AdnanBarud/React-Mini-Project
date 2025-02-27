@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="header w-full h-16 border-[1px]">
+    <div className="header w-full h-16">
       <div className="flex items-center justify-between w-11/12 mx-auto ">
         {/* nike image */}
         <div className="flex justify-center items-center pt-15px pr-85px">
@@ -23,7 +23,7 @@ const Navbar = () => {
           </Link>
         </div>
         {/* navbar content */}
-        <nav className="flex gap-x-5">
+        <nav className="flex gap-x-5 font-medium">
           {navlinkData.map((elm,ind)=>(
             <ul key={ind} className="">
               <NavLink to={elm.path}>
