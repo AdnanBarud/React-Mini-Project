@@ -51,9 +51,11 @@ const Home = () => {
 
     <div>
         <textarea 
-        className="rounded-2xl p-2 mt-2 bg-[#0f0c0c] w-[300px] rows-20"
+        className="rounded-2xl p-2 mt-2 bg-[#0f0c0c] w-[500px] rows-20"
+        placeholder="Enter content here"
         value={value}
         onChange={(e)=> setValue(e.target.value)}
+        rows={20}
         >
           
         </textarea>
