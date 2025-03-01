@@ -1,5 +1,6 @@
 import React, { use, useState } from "react";
 import { useSearchParams, useDispatch } from "react-router-dom";
+import { addToPaste } from "../features/PasteSlice";
 
 const Home = () => {
   const [title, setTitle] = useState("");
@@ -10,23 +11,8 @@ const Home = () => {
 
 
   function createPaste() {
-    const paste = {
-      title: title,
-      content: value,
-      _id: pasteId ||
-        Date.now().toString(33),
-      createdAt: new Date().toISOString(),
+    
 
-    }
-
-    if(pasteId){
-      //update
-      
-    }
-    else{
-      // create
-
-    }
   }
 
   return (
