@@ -1,11 +1,12 @@
 import React, { use, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, useDispatch } from "react-router-dom";
 
 const Home = () => {
   const [title, setTitle] = useState("");
   const [value, setValue] = useState('');
   const [searchParams, setSearchParams] = useSearchParams();
   const pasteId=searchParams.get('pasteId');
+  const dispatch = useDispatch();
 
 
   function createPaste() {
@@ -15,6 +16,15 @@ const Home = () => {
       _id: pasteId ||
         Date.now().toString(33),
       createdAt: new Date().toISOString(),
+
+    }
+
+    if(pasteId){
+      //update
+      
+    }
+    else{
+      // create
 
     }
   }
