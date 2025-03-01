@@ -11,7 +11,28 @@ const Home = () => {
 
 
   function createPaste() {
+    const paste = {
+      title: title,
+      content: value,
+      _id: pasteId ||
+        Date.now().toString(33),
+      createdAt: new Date().toISOString(),
+
+    }
+
+    if(pasteId){
+      //update
+      dispatch(updateToPaste(paste));
+    }
+    else{
+      // create
+      dispatch(addToPaste(paste));
+    }
     
+    // after creation or updation
+    setTitle('');
+    setValue('');
+    setSearchParams('');
 
   }
 
