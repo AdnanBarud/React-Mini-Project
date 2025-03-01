@@ -1,6 +1,7 @@
 import React, { use, useState } from "react";
-import { useSearchParams, useDispatch } from "react-router-dom";
-import { addToPaste } from "../features/PasteSlice";
+import { useSearchParams,  } from "react-router-dom";
+import { addToPaste, updateToPaste } from "../features/PasteSlice";
+import { useDispatch } from "react-redux";
 
 const Home = () => {
   const [title, setTitle] = useState("");
@@ -32,7 +33,7 @@ const Home = () => {
     // after creation or updation
     setTitle('');
     setValue('');
-    setSearchParams('');
+    setSearchParams({});
 
   }
 
