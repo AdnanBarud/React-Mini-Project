@@ -4,6 +4,8 @@ import { addToPaste, updateToPaste } from "../features/PasteSlice";
 import { useDispatch } from "react-redux";
 
 const Home = () => {
+
+  // for tracing title value serchParams and create pasteId and dispatch
   const [title, setTitle] = useState("");
   const [value, setValue] = useState('');
   const [searchParams, setSearchParams] = useSearchParams();
@@ -11,6 +13,7 @@ const Home = () => {
   const dispatch = useDispatch();
 
 
+  //adding logic to create paste button
   function createPaste() {
     const paste = {
       title: title,
@@ -39,12 +42,12 @@ const Home = () => {
 
   return (
   <div>
-    <div className="flex justify-evenly items-center gap-x-4">
+    <div className="flex justify-between items-center ">
 
       {/* for title */}
-      <div className=" ">
+      <div className="hover:border-color:#646cff">
         <input
-          className="rounded-2xl p-2 mt-2 bg-[#0f0c0c] w-[300px]"
+          className="rounded-2xl p-2 mt-2 bg-[#0f0c0c] w-[350px] text-white"
           value={title}
           type="text"
           placeholder="enter title here"
@@ -54,7 +57,7 @@ const Home = () => {
 
       {/* button for update or create */}
       <button
-      className="rounded-2xl p-2 mt-2 "
+      className="rounded-2xl p-2 mt-2 bg-[#0f0c0c]  "
       onClick={createPaste}
       >
         {
@@ -69,11 +72,11 @@ const Home = () => {
 
     <div>
         <textarea 
-        className="rounded-2xl p-2 mt-2 bg-[#0f0c0c] w-[500px] rows-20"
+        className="rounded-2xl p-2 mt-4 bg-[#0f0c0c] w-[550px] rows-20"
         placeholder="Enter content here"
         value={value}
         onChange={(e)=> setValue(e.target.value)}
-        rows={20}
+        rows={22}
         >
           
         </textarea>
